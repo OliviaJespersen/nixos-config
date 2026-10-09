@@ -7,6 +7,7 @@
 			config.flake.modules.nixos.btop
 			config.flake.modules.nixos.fastfetch
 			config.flake.modules.nixos.sabnzbd
+			config.flake.modules.nixos.jellyfin
 		];
 
 		networking.hostName = "cassiopeia";
