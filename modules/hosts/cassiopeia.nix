@@ -6,6 +6,7 @@
 			config.flake.modules.nixos.ssh
 			config.flake.modules.nixos.btop
 			config.flake.modules.nixos.fastfetch
+			config.flake.modules.nixos.sabnzbd
 		];
 
 		networking.hostName = "cassiopeia";
