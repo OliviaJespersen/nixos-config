@@ -8,7 +8,7 @@
         services.sabnzbd = {
             enable = true;
             openFirewall = false;
-            allowConfigWrite = false;
+            allowConfigWrite = true;
         };
     };
 }
