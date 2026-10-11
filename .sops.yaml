@@ -1,0 +1,10 @@
+keys:
+  - &admin age1hw2fkrs6hngyt2fvqpm0ujth50l6u8c0wsh9042s8v36ap4ta5hqu8crj4
+  - &cassiopeia age19tw84k4ufk7mpckjxcd86tazyzgjvrhnz98eus43an8zkn3xe4ksspzm9q
+
+creation_rules:
+  - path_regex: ^secrets/cassiopeia\.yaml$
+    key_groups:
+      - age:
+          - *admin
+          - *cassiopeia

@@ -1,14 +1,19 @@
 { inputs, config, ... }:
+let
+	nixosModules = config.flake.modules.nixos;
+in
 {
-	flake.modules.nixos.cassiopeia = { ... }: {
+	flake.modules.nixos.cassiopeia = { config, ... }: {
 		imports = [
 			./_hardware-configuration.nix
-			config.flake.modules.nixos.ssh
-			config.flake.modules.nixos.btop
-			config.flake.modules.nixos.fastfetch
+			nixosModules.ssh
+			nixosModules.btop
+			nixosModules.fastfetch
+			nixosModules.nixflix
 		];
 
 		networking.hostName = "cassiopeia";
+		sops.defaultSopsFile = ../../secrets/cassiopeia.yaml;
 		networking.useDHCP = true;
 
 		boot.loader.systemd-boot.enable = true;
